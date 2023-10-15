@@ -1,0 +1,32 @@
+include<stdio.h>
+int fib(int);
+int main()
+{
+int i,n;
+printf("\n\n\tProgram to print the Fibonacci Series\n");
+printf("Enter a value for n :\t");
+scanf("%d",&n);
+if(n<=0)
+{
+printf("Check the number\n");
+}
+else
+{
+printf("The fibonacci series is \n");
+for(i=0;i<n;i++)
+{
+printf("%d\t",fib(i));
+}
+}
+printf("\n");
+return(0);
+}
+int fib(int n)
+{
+if(n==0)
+return(0);
+if(n==1)
+return(1);
+else
+return(fib(n-1)+fib(n-2));
+}
